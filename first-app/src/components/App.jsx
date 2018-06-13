@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const App = (props) => {
-    return(
-        <h1>{props.superhero.name}</h1>
-    )
+class App extends Component {
+  
+    render() {
+        return (
+            <h1>{this.props.superhero.name}</h1>
+        )
+    }
+
 }
- export default App;
+export default App;
