@@ -12,10 +12,10 @@ class App extends Component {
             <React.Fragment>
                 <h1>{this.props.superhero.name} {this.state.text}</h1>
                 <input placeholder={this.state.text}
-                       onChange={(event) => {
+                    onChange={(event) => {
                         this.setState({ text: event.target.value })
                     }}></input>
-
+                <button onClick={}></button>
             </React.Fragment>
 
         )
