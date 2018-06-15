@@ -4,12 +4,14 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: "VS Superman!!"
+            text: "VS Superman!!",
+            hasLoaded: false
         }
 
+
     }
-    hasLoaded = (e) => {
-        console.log('hello')
+    hasLoaded = () => {
+        this.setState({hasLoaded: !this.state.hasLoaded});
     }
     render() {
         return (
@@ -20,7 +22,7 @@ class App extends Component {
                     onChange={(event) => {
                         this.setState({ text: event.target.value })
                     }}></input>
-                <button onClick={this.hasLoaded()}></button>
+                <button onClick={this.hasLoaded}>Click me</button>
             </React.Fragment>
 
         )
