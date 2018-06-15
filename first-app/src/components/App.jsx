@@ -33,7 +33,7 @@ class App extends Component {
             return (
                 <React.Fragment>
                     <h1>LOADING.....</h1>
-                    <button onCLick={this.hasLoaded}>Click</button>
+                    <button onClick={this.hasLoaded}>Click</button>
                 </React.Fragment>
             )
         }
