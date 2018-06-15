@@ -13,6 +13,9 @@ class App extends Component {
     hasLoaded = () => {
         this.setState({ hasLoaded: !this.state.hasLoaded });
     }
+    componentDidMount = () => {
+        this.setState({hasLoaded: true})
+    }
     render() {
         if (this.state.hasLoaded) {
             return (
@@ -26,7 +29,7 @@ class App extends Component {
                     <button onClick={this.hasLoaded}>Click me</button>
                 </React.Fragment>
             )
-        } else {
+        } else{
             return (
                 <React.Fragment>
                     <h1>LOADING.....</h1>
