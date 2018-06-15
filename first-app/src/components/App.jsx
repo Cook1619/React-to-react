@@ -6,16 +6,21 @@ class App extends Component {
         this.state = {
             text: "VS Superman!!"
         }
+
+    }
+    hasLoaded = (e) => {
+        console.log('hello')
     }
     render() {
         return (
             <React.Fragment>
                 <h1>{this.props.superhero.name} {this.state.text}</h1>
-                <input placeholder={this.state.text}
+                <input
+                    placeholder={this.state.text}
                     onChange={(event) => {
                         this.setState({ text: event.target.value })
                     }}></input>
-                <button onClick={}></button>
+                <button onClick={this.hasLoaded()}></button>
             </React.Fragment>
 
         )
